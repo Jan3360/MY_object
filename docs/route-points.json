@@ -1,0 +1,30 @@
+{
+  "title": "2026-08-20 至 2026-08-27 保定—锡林郭勒—二连浩特自驾",
+  "coordinateSystem": "GCJ-02",
+  "generatedAt": "2026-08-14",
+  "points": {
+    "rental": {"name": "一嗨租车(保定站服务点)", "poiId": "B0HKH5B9EL", "lon": 115.480624, "lat": 38.860559, "address": "高德当前显示建华大街716号", "note": "用户订单名称为一嗨租车保定站服务店；出发前以订单定位及门店电话最终确认"},
+    "huairou": {"name": "全季酒店(北京怀柔万达广场店)", "poiId": "B0I27CPEDQ", "lon": 116.630326, "lat": 40.319215},
+    "fengning": {"name": "丰宁满族自治县人民政府", "lon": 116.6455, "lat": 41.209},
+    "datan": {"name": "国家一号风景大道大滩镇起始点", "poiId": "B0FFJHYS3H", "lon": 116.016421, "lat": 41.576804},
+    "duolun": {"name": "全季酒店(锡林郭勒盟多伦县店)", "poiId": "B0MD6UATJN", "lon": 116.504024, "lat": 42.201586},
+    "zhenglan": {"name": "正蓝旗上都镇", "lon": 115.98732, "lat": 42.240341},
+    "sanggen": {"name": "桑根达来镇", "lon": 115.9522, "lat": 42.675494},
+    "atourXilinhot": {"name": "锡林浩特锡林广场杭盖路亚朵酒店", "poiId": "B0KRSAH6FT", "lon": 116.111673, "lat": 43.930001},
+    "hantingWestUjimqin": {"name": "汉庭西乌珠穆沁旗生态公园酒店", "poiId": "B0KU17FT3I", "lon": 117.627605, "lat": 44.575173},
+    "road99": {"name": "西乌珠穆沁旗草原99号公路起点", "poiId": "B0KDLCU09E", "lon": 117.35, "lat": 44.5, "note": "高德公开POI只显示到小数点后2位，必须在客户端核对官方起点名称"},
+    "lookout": {"name": "成吉思汗瞭望山景区", "poiId": "B0H3TSHXBC", "lon": 117.47, "lat": 44.44, "note": "高德公开POI只显示到小数点后2位，若入口不是连续铺装路则跳过"},
+    "mongolKhan": {"name": "蒙古汗城旅游景区", "poiId": "B01DF0IHQ8", "lon": 117.665053, "lat": 44.458624},
+    "nomad": {"name": "游牧部落观景驿站", "poiId": "B0LDU5HLAD", "lon": 118.008, "lat": 44.399344},
+    "abaga": {"name": "阿巴嘎旗别力古台镇", "lon": 114.979139, "lat": 44.025463},
+    "villis": {"name": "维利斯大酒店(苏尼特左旗)", "poiId": "B0JKAPKU97", "lon": 113.636939, "lat": 43.854291},
+    "hantingErenhot": {"name": "汉庭酒店(锡林郭勒盟二连浩特店)", "poiId": "B0K1X54UB2", "lon": 111.985608, "lat": 43.633687},
+    "guomen": {"name": "二连浩特国门景区", "poiId": "B01DF14A1J", "lon": 111.955344, "lat": 43.678297},
+    "saihantala": {"name": "赛汉塔拉镇", "lon": 112.654248, "lat": 42.752388},
+    "baiyinchagan": {"name": "白音察干镇", "lon": 113.199532, "lat": 41.439257},
+    "atourUlanqab": {"name": "乌兰察布站达尔登大道亚朵酒店", "poiId": "B0JGJ98630", "lon": 113.145183, "lat": 40.957633},
+    "datong": {"name": "大同东信广场", "poiId": "B01600MMA1", "lon": 113.292439, "lat": 40.052931},
+    "hunyuan": {"name": "浑源县城", "lon": 113.699475, "lat": 39.693407},
+    "laiyuan": {"name": "涞源县城", "lon": 114.694284, "lat": 39.360247}
+  }
+}

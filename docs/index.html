@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0d3b2e">
+  <title>锡林郭勒 7 日自驾｜高德一键路线</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --green: #0d6b4f;
+      --green-dark: #0d3b2e;
+      --green-soft: #e8f4ef;
+      --blue: #1677ff;
+      --orange: #b45309;
+      --red: #b42318;
+      --ink: #18201d;
+      --muted: #67736e;
+      --line: #d9e2de;
+      --paper: #fff;
+      --bg: #eef3f0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      padding: max(18px, env(safe-area-inset-top)) max(14px, env(safe-area-inset-right)) max(34px, env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left));
+      color: var(--ink);
+      background: linear-gradient(180deg, #dcebe4 0, var(--bg) 260px, var(--bg) 100%);
+    }
+    main { width: min(760px, 100%); margin: 0 auto; }
+    header {
+      color: #fff;
+      padding: 24px 20px 22px;
+      border-radius: 22px;
+      background:
+        radial-gradient(circle at 85% 12%, rgba(255,255,255,.18), transparent 30%),
+        linear-gradient(135deg, #0d3b2e, #147755);
+      box-shadow: 0 14px 35px rgba(13,59,46,.22);
+    }
+    header h1 { margin: 0 0 8px; font-size: 27px; line-height: 1.25; }
+    header p { margin: 5px 0; line-height: 1.6; color: rgba(255,255,255,.88); }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+    .badge { padding: 6px 10px; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; background: rgba(255,255,255,.12); font-size: 13px; }
+    .top-note, .day {
+      margin-top: 15px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--paper);
+      box-shadow: 0 4px 16px rgba(26,51,41,.06);
+    }
+    .top-note { line-height: 1.68; }
+    .top-note strong { color: var(--green-dark); }
+    .danger {
+      margin-top: 12px;
+      padding: 12px 13px;
+      border-left: 4px solid #e5484d;
+      border-radius: 9px;
+      background: #fff0f0;
+      color: #842029;
+      line-height: 1.58;
+      font-size: 14px;
+    }
+    nav { display: flex; gap: 7px; overflow-x: auto; padding: 14px 2px 2px; scrollbar-width: none; }
+    nav::-webkit-scrollbar { display: none; }
+    nav a { flex: 0 0 auto; padding: 8px 11px; border: 1px solid #b9cdc4; border-radius: 999px; color: var(--green-dark); background: rgba(255,255,255,.75); text-decoration: none; font-weight: 650; font-size: 13px; }
+    .day-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+    .date { color: var(--green); font-size: 13px; font-weight: 800; letter-spacing: .04em; }
+    h2 { margin: 3px 0 0; font-size: 21px; line-height: 1.38; }
+    .sleep { flex: 0 0 auto; padding: 6px 9px; border-radius: 10px; background: var(--green-soft); color: var(--green-dark); font-size: 12px; font-weight: 700; }
+    .route-line { margin: 13px 0 8px; color: #28332e; line-height: 1.65; }
+    .route-line span { color: #7c8782; }
+    .meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 14px; }
+    .meta span { padding: 5px 8px; border-radius: 8px; background: #f2f5f3; color: var(--muted); font-size: 12px; }
+    .actions { display: grid; grid-template-columns: 1fr; gap: 9px; }
+    a.button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 51px;
+      padding: 13px 15px;
+      border-radius: 13px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 750;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .primary { color: #fff; background: var(--blue); box-shadow: 0 6px 15px rgba(22,119,255,.2); }
+    .secondary { color: var(--green-dark); border: 1px solid #a9c5b9; background: #f6fbf8; }
+    .orange { color: #fff; background: #c05b0c; }
+    .segment-title { margin: 15px 0 8px; color: #3b4943; font-size: 14px; font-weight: 800; }
+    .segments { display: grid; gap: 8px; }
+    .segments a { min-height: 44px; padding: 10px 12px; border: 1px solid #cfdad5; border-radius: 11px; color: #24443a; background: #fff; text-decoration: none; font-size: 14px; font-weight: 650; text-align: center; }
+    details { margin-top: 13px; padding-top: 11px; border-top: 1px dashed #d5ded9; }
+    summary { color: #44524c; cursor: pointer; font-weight: 700; }
+    .note { margin: 9px 0 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .warning { color: var(--red); font-weight: 700; }
+    .map-wrap { position: relative; overflow: hidden; margin-top: 12px; padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: linear-gradient(145deg,#f6fbf8,#edf5f1); }
+    .map-svg { display: block; width: 100%; height: auto; }
+    .map-road { fill: none; stroke: #72a18d; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; opacity: .8; }
+    .map-dot { fill: #0d6b4f; stroke: #fff; stroke-width: 5; }
+    .map-label { fill: #1d3028; font-size: 21px; font-weight: 700; paint-order: stroke; stroke: #f7fbf9; stroke-width: 6; stroke-linejoin: round; }
+    footer { padding: 22px 5px 5px; color: var(--muted); font-size: 13px; line-height: 1.65; text-align: center; }
+    code { padding: 2px 5px; border-radius: 5px; background: #edf1ef; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    @media (min-width: 620px) {
+      .actions.two { grid-template-columns: 1fr 1fr; }
+      .segments { grid-template-columns: 1fr 1fr; }
+      .day { padding: 21px 22px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>保定 → 锡林郭勒 → 二连浩特<br>7 日自驾高德路线</h1>
+    <p>2026-08-20 18:00 取车 · 2026-08-27 18:00 前还车</p>
+    <p>起终点：一嗨租车（保定站服务点）</p>
+    <div class="badge-row">
+      <span class="badge">iPhone Safari</span>
+      <span class="badge">高德地图 App</span>
+      <span class="badge">每天一键载入途经点</span>
+      <span class="badge">附分段安全按钮</span>
+    </div>
+  </header>
+
+  <section class="top-note">
+    <strong>使用方法：</strong>用 iPhone 的 <strong>Safari</strong> 打开本页，出发前点当天蓝色按钮。高德会载入当天起点、终点和途经点；进入高德后先看一遍全程蓝线和道路编号，再点“开始导航”。
+    <div class="danger">
+      本页不能锁死高德的路线偏好——iOS 高德会沿用你 App 里的本地设置。出发前把“避开高速”关闭；遇到 <strong>G625、Y912、无编号道路、内部道路、施工便道、草场车辙</strong>，立即取消。D3 草原99、D4、D6、D7优先使用下面的分段按钮。
+    </div>
+  </section>
+
+  <nav>
+    <a href="#d0">8/20</a><a href="#d1">8/21</a><a href="#d2">8/22</a><a href="#d3">8/23</a><a href="#d4">8/24</a><a href="#d5">8/25</a><a href="#d6">8/26</a><a href="#d7">8/27</a>
+  </nav>
+
+  <section class="top-note">
+    <strong>总路线示意图</strong>（仅用于看环线方向，实际道路以当天高德按钮为准）
+    <div class="map-wrap" aria-label="保定至锡林郭勒自驾总路线示意图">
+      <svg class="map-svg" viewBox="0 0 760 500" role="img">
+        <polyline class="map-road" points="135,445 310,330 360,220 415,185 605,125 545,92 390,120 255,100 105,85 130,245 180,345 135,445"/>
+        <circle class="map-dot" cx="135" cy="445" r="11"/><text class="map-label" x="153" y="452">保定</text>
+        <circle class="map-dot" cx="310" cy="330" r="10"/><text class="map-label" x="328" y="336">怀柔</text>
+        <circle class="map-dot" cx="360" cy="220" r="10"/><text class="map-label" x="378" y="227">多伦</text>
+        <circle class="map-dot" cx="415" cy="185" r="10"/><text class="map-label" x="433" y="191">锡林浩特</text>
+        <circle class="map-dot" cx="605" cy="125" r="10"/><text class="map-label" x="623" y="131">西乌旗</text>
+        <circle class="map-dot" cx="545" cy="92" r="10"/><text class="map-label" x="563" y="82">99号公路</text>
+        <circle class="map-dot" cx="390" cy="120" r="10"/><text class="map-label" x="345" y="102">阿巴嘎</text>
+        <circle class="map-dot" cx="255" cy="100" r="10"/><text class="map-label" x="195" y="82">苏左旗</text>
+        <circle class="map-dot" cx="105" cy="85" r="10"/><text class="map-label" x="18" y="71">二连浩特</text>
+        <circle class="map-dot" cx="130" cy="245" r="10"/><text class="map-label" x="28" y="252">乌兰察布</text>
+        <circle class="map-dot" cx="180" cy="345" r="10"/><text class="map-label" x="198" y="352">大同/涞源</text>
+      </svg>
+    </div>
+  </section>
+
+  <section class="day" id="d0">
+    <div class="day-head"><div><div class="date">D0 · 8月20日 周四 · 18:00出发</div><h2>保定一嗨 → 怀柔全季</h2></div><div class="sleep">住怀柔</div></div>
+    <p class="route-line">一嗨租车保定站服务点 <span>→</span> 全季酒店（北京怀柔万达广场店）</p>
+    <div class="meta"><span>夜间交通段</span><span>预计22:00–23:30到</span><span>选实时最快外缘路线</span></div>
+    <div class="actions two">
+      <a class="button primary" data-route="d0">一键打开 D0 高德路线</a>
+      <a class="button secondary" data-web="d0">打不开 App？高德网页版</a>
+    </div>
+    <details><summary>当天提醒</summary><p class="note">若强对流持续、20:30仍明显滞留在固安一带，可临时住固安。不要继续摸黑跑丰宁。</p></details>
+  </section>
+
+  <section class="day" id="d1">
+    <div class="day-head"><div><div class="date">D1 · 8月21日 周五</div><h2>怀柔 → 丰宁 → 大滩 → 多伦</h2></div><div class="sleep">住多伦</div></div>
+    <p class="route-line">怀柔全季 <span>→</span> 丰宁县城 <span>→</span> 国家一号风景大道大滩起始点 <span>→</span> 多伦全季</p>
+    <div class="meta"><span>约300km</span><span>白天风景线</span><span>不进张家口市区</span></div>
+    <div class="actions"><a class="button primary" data-route="d1">一键载入丰宁＋大滩途经点</a></div>
+    <div class="segment-title">路况异常时分段开</div>
+    <div class="segments"><a data-route="d1a">① 怀柔 → 丰宁 → 大滩</a><a data-route="d1b">② 大滩 → 多伦全季</a></div>
+    <details><summary>道路核对</summary><p class="note">走铺装主路。导航路牌出现“张家口方向”不等于进张家口市区；不要为了“不走高速”接受村路或无编号近路。</p></details>
+  </section>
+
+  <section class="day" id="d2">
+    <div class="day-head"><div><div class="date">D2 · 8月22日 周六</div><h2>多伦 → 正蓝旗 → 桑根达来 → 锡林浩特</h2></div><div class="sleep">住锡林浩特</div></div>
+    <p class="route-line">多伦全季 <span>→</span> 正蓝旗上都镇 <span>→</span> 桑根达来镇 <span>→</span> 锡林浩特亚朵</p>
+    <div class="meta"><span>约240–270km</span><span>约4–5h驾驶</span><span>桑根达来后可选高速</span></div>
+    <div class="actions"><a class="button primary" data-route="d2">一键载入正蓝旗＋桑根达来</a></div>
+    <div class="segment-title">桑根达来以后按天气选</div>
+    <div class="segments"><a data-route="d2a">① 多伦 → 正蓝旗 → 桑根达来</a><a data-route="d2b">② 桑根达来 → 锡林浩特</a></div>
+    <details><summary>道路核对</summary><p class="note"><span class="warning">G239到桑根达来结束</span>，之后不要继续把G239当成北上道路。若延误或下雨，接受G1013；天气好再比较G207。</p></details>
+  </section>
+
+  <section class="day" id="d3">
+    <div class="day-head"><div><div class="date">D3 · 8月23日 周日</div><h2>锡林浩特 → 西乌旗 → 草原99号公路</h2></div><div class="sleep">住西乌旗</div></div>
+    <p class="route-line">锡林浩特亚朵 <span>→</span> 西乌旗汉庭 <span>→</span> 99号公路官方起点 <span>→</span> 瞭望山 <span>→</span> 蒙古汗城 <span>→</span> 游牧部落 <span>→</span> 西乌旗汉庭</p>
+    <div class="meta"><span>核心风景日</span><span>16:30硬折返</span><span>只走连续铺装路</span></div>
+    <div class="actions"><a class="button orange" data-route="d3all">整日预览（只看总览，不建议直接开）</a></div>
+    <div class="segment-title">推荐：到一站再点下一站</div>
+    <div class="segments">
+      <a data-route="d3a">① 锡林浩特 → 西乌旗汉庭</a>
+      <a data-route="d3b">② 汉庭 → 99号公路官方起点</a>
+      <a data-route="d3c">③ 官方起点 → 瞭望山</a>
+      <a data-route="d3d">④ 瞭望山 → 蒙古汗城</a>
+      <a data-route="d3e">⑤ 蒙古汗城 → 游牧部落</a>
+      <a data-route="d3f">⑥ 游牧部落 → 西乌旗汉庭</a>
+    </div>
+    <details open><summary>草原99安全规则</summary><p class="note"><span class="warning">不要采用“网红机位、草原深处、最佳弯道、牧场穿越”等同名点。</span> 若蓝线进入细线、虚线、双车辙、牧场门或围栏，立刻取消；若任意相邻景点之间不是连续铺装路，直接跳过该景点，原路返回城区。</p></details>
+  </section>
+
+  <section class="day" id="d4">
+    <div class="day-head"><div><div class="date">D4 · 8月24日 周一</div><h2>西乌旗 → 锡林浩特 → 阿巴嘎 → 苏左旗</h2></div><div class="sleep">住苏左旗</div></div>
+    <p class="route-line">西乌旗汉庭 <span>→</span> 锡林浩特亚朵 <span>→</span> 阿巴嘎旗别力古台镇 <span>→</span> 苏尼特左旗维利斯</p>
+    <div class="meta"><span>约355–380km</span><span>G207 → G303 → G331</span><span>禁入G625</span></div>
+    <div class="actions"><a class="button orange" data-route="d4all">整日路线总览</a></div>
+    <div class="segment-title">推荐按道路体系分3段</div>
+    <div class="segments"><a data-route="d4a">① 西乌旗 → 锡林浩特</a><a data-route="d4b">② 锡林浩特 → 别力古台</a><a data-route="d4c">③ 别力古台 → 苏左旗维利斯</a></div>
+    <details open><summary>一票否决</summary><p class="note">总览应依次呈现 <code>G207 → G303 → G331</code>。看到 <strong>G625、额乐特、多希音戈壁、无编号道路、施工便道、草场便道</strong>，立即取消。</p></details>
+  </section>
+
+  <section class="day" id="d5">
+    <div class="day-head"><div><div class="date">D5 · 8月25日 周二</div><h2>苏左旗 → 二连浩特 → 国门</h2></div><div class="sleep">住二连</div></div>
+    <p class="route-line">维利斯大酒店 <span>→</span> 二连汉庭放行李 <span>→</span> 二连浩特国门景区 <span>→</span> 二连汉庭</p>
+    <div class="meta"><span>上午约150km</span><span>国门1.5–2.5h</span><span>原件身份证</span></div>
+    <div class="actions"><a class="button primary" data-route="d5all">一键预览入住＋国门＋返店</a></div>
+    <div class="segment-title">实际驾驶建议分段</div>
+    <div class="segments"><a data-route="d5a">① 苏左旗 → 二连汉庭</a><a data-route="d5b">② 汉庭 → 国门</a><a data-route="d5c">③ 国门 → 汉庭</a></div>
+    <details><summary>景区提醒</summary><p class="note">出发前拨 <strong>0479-7533111</strong> 核实开放与最后入园。边境区域不飞无人机，按现场指示拍摄。</p></details>
+  </section>
+
+  <section class="day" id="d6">
+    <div class="day-head"><div><div class="date">D6 · 8月26日 周三</div><h2>二连浩特 → 赛汉塔拉 → 白音察干 → 乌兰察布</h2></div><div class="sleep">住乌兰察布</div></div>
+    <p class="route-line">二连汉庭 <span>→</span> 赛汉塔拉镇 <span>→</span> 白音察干镇 <span>→</span> 乌兰察布亚朵</p>
+    <div class="meta"><span>约340–360km</span><span>风景版G208</span><span>坏天气直接G55</span></div>
+    <div class="actions two">
+      <a class="button primary" data-route="d6scenic">晴天风景版：载入两个镇</a>
+      <a class="button orange" data-route="d6fast">雨天/疲劳版：打开高速总览</a>
+    </div>
+    <div class="segment-title">风景版稳妥分段</div>
+    <div class="segments"><a data-route="d6a">① 二连 → 赛汉塔拉 → 白音察干</a><a data-route="d6b">② 白音察干 → 乌兰察布亚朵</a></div>
+    <details><summary>当天判断</summary><p class="note">风景版逐段确认G208；白音察干后可切G55。暴雨、大风、疲劳直接用高速，不要全局设置“不走高速”。路线若向东进入怀安或张家口，取消重选。</p></details>
+  </section>
+
+  <section class="day" id="d7">
+    <div class="day-head"><div><div class="date">D7 · 8月27日 周四 · 18:00前还车</div><h2>乌兰察布 → 大同 → 浑源 → 涞源 → 保定</h2></div><div class="sleep">回保定</div></div>
+    <p class="route-line">乌兰察布亚朵 <span>→</span> 大同东信广场 <span>→</span> 浑源县城 <span>→</span> 涞源县城 <span>→</span> 一嗨租车保定站服务点</p>
+    <div class="meta"><span>约460–480km</span><span>07:00–07:30出发</span><span>16:30目标到店</span></div>
+    <div class="actions"><a class="button orange" data-route="d7all">整日路线总览</a></div>
+    <div class="segment-title">推荐4段，随时按路况取舍</div>
+    <div class="segments"><a data-route="d7a">① 乌兰察布 → 大同东信</a><a data-route="d7b">② 大同 → 浑源</a><a data-route="d7c">③ 浑源 → 涞源</a><a data-route="d7d">④ 涞源 → 保定一嗨</a></div>
+    <details open><summary>还车日红线</summary><p class="note">正确总轴应为乌兰察布—丰镇—大同—浑源—灵丘—涞源—保定。若先向东去怀安、宣化、张家口或蔚县，取消。当天先核实G18浑源—灵丘管制；10:30仍未离开大同时，取消正式进城吃饭，改服务区简餐。</p></details>
+  </section>
+
+  <footer>
+    坐标按高德可用的 GCJ-02 制作；酒店与景区优先使用高德POI或精确中文地图点。<br>
+    高德 iOS 多途经点官方URI：<code>iosamap://path</code>。客户端可能按你的本地偏好重算，任何按钮都不能替代临行路况复核。<br><br>
+    路线版本：2026-08-14
+  </footer>
+</main>
+
+<script>
+"use strict";
+const P = {
+  rental:{name:"一嗨租车(保定站服务点)",id:"B0HKH5B9EL",lon:115.480624,lat:38.860559},
+  huairou:{name:"全季酒店(北京怀柔万达广场店)",id:"B0I27CPEDQ",lon:116.630326,lat:40.319215},
+  fengning:{name:"丰宁满族自治县人民政府",lon:116.6455,lat:41.209},
+  datan:{name:"国家一号风景大道大滩镇起始点",lon:116.016421,lat:41.576804},
+  duolun:{name:"全季酒店(锡林郭勒盟多伦县店)",id:"B0MD6UATJN",lon:116.504024,lat:42.201586},
+  zhenglan:{name:"正蓝旗上都镇",lon:115.98732,lat:42.240341},
+  sanggen:{name:"桑根达来镇",lon:115.9522,lat:42.675494},
+  atourxl:{name:"锡林浩特锡林广场杭盖路亚朵酒店",id:"B0KRSAH6FT",lon:116.111673,lat:43.930001},
+  hantingwest:{name:"汉庭西乌珠穆沁旗生态公园酒店",id:"B0KU17FT3I",lon:117.627605,lat:44.575173},
+  road99:{name:"西乌珠穆沁旗草原99号公路起点",lon:117.35,lat:44.50},
+  lookout:{name:"成吉思汗瞭望山景区",lon:117.47,lat:44.44},
+  mongol:{name:"蒙古汗城旅游景区",lon:117.665053,lat:44.458624},
+  nomad:{name:"游牧部落观景驿站",lon:118.008,lat:44.399344},
+  abaga:{name:"阿巴嘎旗别力古台镇",lon:114.979139,lat:44.025463},
+  villis:{name:"维利斯大酒店(苏尼特左旗)",id:"B0JKAPKU97",lon:113.636939,lat:43.854291},
+  hantinger:{name:"汉庭酒店(锡林郭勒盟二连浩特店)",id:"B0K1X54UB2",lon:111.985608,lat:43.633687},
+  guomen:{name:"二连浩特国门景区",lon:111.955344,lat:43.678297},
+  saihantala:{name:"赛汉塔拉镇",lon:112.654248,lat:42.752388},
+  baiyin:{name:"白音察干镇",lon:113.199532,lat:41.439257},
+  atourwl:{name:"乌兰察布站达尔登大道亚朵酒店",id:"B0JGJ98630",lon:113.145183,lat:40.957633},
+  datong:{name:"大同东信广场",lon:113.292439,lat:40.052931},
+  hunyuan:{name:"浑源县城",lon:113.699475,lat:39.693407},
+  laiyuan:{name:"涞源县城",lon:114.694284,lat:39.360247}
+};
+const R = {
+  d0:["rental",[],"huairou"],
+  d1:["huairou",["fengning","datan"],"duolun"], d1a:["huairou",["fengning"],"datan"], d1b:["datan",[],"duolun"],
+  d2:["duolun",["zhenglan","sanggen"],"atourxl"], d2a:["duolun",["zhenglan"],"sanggen"], d2b:["sanggen",[],"atourxl"],
+  d3all:["atourxl",["hantingwest","road99","lookout","mongol","nomad"],"hantingwest"],
+  d3a:["atourxl",[],"hantingwest"], d3b:["hantingwest",[],"road99"], d3c:["road99",[],"lookout"], d3d:["lookout",[],"mongol"], d3e:["mongol",[],"nomad"], d3f:["nomad",[],"hantingwest"],
+  d4all:["hantingwest",["atourxl","abaga"],"villis"], d4a:["hantingwest",[],"atourxl"], d4b:["atourxl",[],"abaga"], d4c:["abaga",[],"villis"],
+  d5all:["villis",["hantinger","guomen"],"hantinger"], d5a:["villis",[],"hantinger"], d5b:["hantinger",[],"guomen"], d5c:["guomen",[],"hantinger"],
+  d6scenic:["hantinger",["saihantala","baiyin"],"atourwl"], d6fast:["hantinger",[],"atourwl"], d6a:["hantinger",["saihantala"],"baiyin"], d6b:["baiyin",[],"atourwl"],
+  d7all:["atourwl",["datong","hunyuan","laiyuan"],"rental"], d7a:["atourwl",[],"datong"], d7b:["datong",[],"hunyuan"], d7c:["hunyuan",[],"laiyuan"], d7d:["laiyuan",[],"rental"]
+};
+function enc(v){ return encodeURIComponent(String(v)); }
+function buildApp(spec){
+  const start=P[spec[0]], vias=spec[1].map(k=>P[k]), end=P[spec[2]];
+  const entries=[
+    ["sourceApplication","锡林郭勒7日自驾"],
+    ["sid",start.id||""],["slat",start.lat],["slon",start.lon],["sname",start.name],
+    ["did",end.id||""],["dlat",end.lat],["dlon",end.lon],["dname",end.name],
+    ["dev",0],["t",0],["m",0],["vian",vias.length]
+  ];
+  let q=entries.map(x=>enc(x[0])+"="+enc(x[1])).join("&");
+  if(vias.length){
+    q += "&vialons="+vias.map(x=>x.lon).join("|")+
+         "&vialats="+vias.map(x=>x.lat).join("|")+
+         "&vianames="+vias.map(x=>enc(x.name)).join("|");
+  }
+  return "iosamap://path?"+q;
+}
+function webPosition(p){ return p.lon+","+p.lat+","+enc(p.name); }
+function buildWeb(spec){
+  const start=P[spec[0]], vias=spec[1].map(k=>P[k]), end=P[spec[2]];
+  let u="https://uri.amap.com/navigation?from="+webPosition(start)+"&to="+webPosition(end)+"&mode=car&policy=0&src="+enc("锡林郭勒7日自驾")+"&callnative=0";
+  if(vias.length) u += "&via="+webPosition(vias[0]);
+  return u;
+}
+document.querySelectorAll("[data-route]").forEach(a=>{ a.href=buildApp(R[a.dataset.route]); });
+document.querySelectorAll("[data-web]").forEach(a=>{ a.href=buildWeb(R[a.dataset.web]); a.target="_blank"; a.rel="noopener noreferrer"; });
+</script>
+</body>
+</html>
