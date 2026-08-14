@@ -4,6 +4,7 @@
   "generatedAt": "2026-08-14",
   "blockedRoads": {
     "Y912": {"status": "do_not_use", "avoidNames": ["炮台营子", "南地房子", "红井", "牛奶湖", "太仆寺旗湖泊或村庄点"], "sources": ["https://www.tpsq.gov.cn/tpsq/mltpsq/tftpsq/jtys/2026062316103445824/index.html", "https://www.tpsq.gov.cn/tpsq/mltpsq/tftpsq/jtys/2026062616450944393/index.html"]},
+    "G331_erenhot_mandulatu": {"status": "opened", "openedAt": "2019-01-16", "note": "二连浩特口岸至满都拉图段已通过交工验收并正式通车；导航中须与新建G625严格区分", "sources": ["https://fgw.xlgl.gov.cn/fgw/ywgz/zhjtys/gzxx/gl/7a4a73eaa6e74ad5b0ded6a2dbf27f0e/index.html", "https://jtj.xlgl.gov.cn/jtysj/jtyw/gljs/6a846e9e737347179894a243e1a93306/index.html"]},
     "G625": {"status": "do_not_use", "note": "施工走廊，不能作为游客捷径；D5不得自行设计经赛汉塔拉保底绕行，只有G331官方封闭公告明确指定时才采用官方绕行", "source": "https://ggzyjy.nmg.gov.cn/jyxx/index_39.html?id=b4f5248f-8bff-47d2-97a1-e96c0d715e67&slb=true"},
     "G18_hunyuan_lingqiu": {"status": "verify_before_departure", "note": "管制未解除时仅按官方绕行，不走无编号山路", "source": "https://jtyst.shanxi.gov.cn/jtzx/sxhyyw1/202604/t20260415_10104505.shtml"},
     "G208_volcano_crossing": {"status": "verify_before_departure", "note": "仍管制则取消火山支线，白音察干直接走G55", "sources": ["https://www.cyhq.gov.cn/ggjtqyxx/1954551.html", "http://res.wulanchabu.gov.cn/ggjtqyxx/1954623.html"]},
