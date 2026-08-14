@@ -14,8 +14,8 @@
     "rental": {"name": "一嗨租车(保定站服务点)", "poiId": "B0HKH5B9EL", "lon": 115.480624, "lat": 38.860559, "address": "高德当前POI显示建华大街716号", "addressConflict": {"city8OldListing": "建华大街702号", "possibleRelocationUnverified": "建华大街711号摩登水晶酒店底商"}, "thirdPartySource": "https://bd.city8.com/cater/41eu6u81jp6fb31e0c", "note": "702号为第三方公开旧址标记；711号疑似迁址尚无可靠坐标。不得用第三方旧址覆盖当前高德POI；取还车前必须以一嗨订单定位和门店电话最终确认，若不同则重新导航"},
     "huairou": {"name": "全季酒店(北京怀柔万达广场店)", "poiId": "B0I27CPEDQ", "lon": 116.630326, "lat": 40.319215},
     "tanghekou": {"name": "中国石化汤河路加油站", "poiId": "B0FFFADSP5", "lon": 116.641086, "lat": 40.732996, "note": "24小时营业，位于汤河口镇滦赤路与平安路交叉口，作为G111沿线明确锚点"},
-    "fengning": {"name": "丰宁满族自治县人民政府", "poiId": "B013A0PQHW", "lon": 116.645781, "lat": 41.208793},
-    "datan": {"name": "大滩镇人民政府", "poiId": "B0FFF4MXTM", "lon": 116.016415, "lat": 41.576749, "note": "采用镇政府明确POI，不使用模糊风景大道入口"},
+    "fengning": {"name": "丰宁满族自治县人民政府", "poiId": "B013A0PQHW", "lon": 116.645781, "lat": 41.208793, "coordinateConflict": {"currentPoiCoordinate": [116.645781, 41.208793], "unverifiedAmapSummaryCandidate": [116.64513, 41.209633], "candidateAddress": "爱民街42号", "approxSeparationMeters": 108}, "conflictSources": {"current": "360名称完全匹配政府建筑POI", "candidate": "sojson公开摘要声称高德定位，但无可核验高德详情页或POI ID"}, "note": "不机械覆盖：当前按钮携带已确认高德POI ID B013A0PQHW，优先依靠POI身份定位；候选坐标只作来源冲突注记，进入高德后核对县政府名称与入口"},
+    "datan": {"name": "大滩镇人民政府", "poiId": "B0FFF4MXTM", "lon": 116.016415, "lat": 41.576749, "thirdPartyCrossCheck": {"coordinate": [116.016476, 41.576749], "source": "360名称完全匹配镇政府建筑POI", "approxSeparationMeters": 5}, "note": "采用镇政府明确高德POI，不使用模糊风景大道入口；第三方交叉坐标仅差约5米，不覆盖高德POI数据"},
     "duolun": {"name": "全季酒店(锡林郭勒盟多伦县店)", "poiId": "B0MD6UATJN", "lon": 116.504024, "lat": 42.201586},
     "zhenglan": {"name": "正蓝旗上都镇", "lon": 115.98732, "lat": 42.240341},
     "sanggen": {"name": "桑根达来镇", "lon": 115.9522, "lat": 42.675494},
@@ -37,8 +37,8 @@
     "atourUlanqab": {"name": "乌兰察布站达尔登大道亚朵酒店", "poiId": "B0JGJ98630", "lon": 113.145183, "lat": 40.957633},
     "fengzhenService": {"name": "丰镇服务区(G55二广高速广州方向)", "poiId": "B01DA0HXX5", "lon": 113.16, "lat": 40.51, "note": "D7南向高速明确锚点"},
     "datong": {"name": "东信广场南地面停车场", "poiId": "B0GKVC516V", "parentPoiId": "B01600MMA1", "lon": 113.29, "lat": 40.05, "note": "东信广场明确地面停车POI，地址为魏都大道与昌宁街交叉口北100米；用于D7短暂停车、吃饭和继续前往浑源"},
-    "hunyuan": {"name": "浑源县人民政府", "poiId": "B0FFJVRYMI", "lon": 113.692155, "lat": 39.706029, "note": "明确城区POI；G18浑源—灵丘管制须临行复核"},
+    "hunyuan": {"name": "浑源县人民政府", "poiId": "B0FFJVRYMI", "lon": 113.692155, "lat": 39.706029, "thirdPartyCrossCheck": {"coordinate": [113.692155, 39.706029], "address": "迎宾街1号", "phone": "0352-8323734", "source": "360名称完全匹配政府建筑POI"}, "note": "明确城区政府POI，不使用113.699475,39.693407县城中心标签；G18浑源—灵丘管制须临行复核"},
     "lingqiuToll": {"name": "灵丘收费站(G18荣乌高速入口)", "poiId": "B0FFGQHJ8J", "lon": 114.29, "lat": 39.46, "note": "仅在G18官方允许通行时作为D7锚点；管制未解除则按官方绕行"},
-    "laiyuan": {"name": "涞源县人民政府", "poiId": "B013800ZUN", "lon": 114.6944, "lat": 39.360638, "note": "明确县城补给锚点"}
+    "laiyuan": {"name": "涞源县人民政府", "poiId": "B013800ZUN", "lon": 114.6944, "lat": 39.360638, "coordinateConflict": {"currentPoiCoordinate": [114.6944, 39.360638], "unverifiedAmapSummaryCandidate": [114.694284, 39.360247], "candidateAddress": "开源路21号", "approxSeparationMeters": 45}, "conflictSources": {"current": "360名称完全匹配政府建筑POI", "candidate": "City8精确名称与所谓高德摘要交叉值，但未提供可核验高德详情页或POI ID"}, "note": "不机械覆盖：当前按钮携带已确认高德POI ID B013800ZUN，优先依靠POI身份定位；候选坐标只作来源冲突注记"}
   }
 }
