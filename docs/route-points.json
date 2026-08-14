@@ -7,7 +7,7 @@
     "G625": {"status": "do_not_use", "note": "施工走廊，不能作为游客捷径", "source": "https://ggzyjy.nmg.gov.cn/jyxx/index_39.html?id=b4f5248f-8bff-47d2-97a1-e96c0d715e67&slb=true"},
     "G18_hunyuan_lingqiu": {"status": "verify_before_departure", "note": "管制未解除时仅按官方绕行，不走无编号山路", "source": "https://jtyst.shanxi.gov.cn/jtzx/sxhyyw1/202604/t20260415_10104505.shtml"},
     "G208_volcano_crossing": {"status": "verify_before_departure", "note": "仍管制则取消火山支线，白音察干直接走G55", "sources": ["https://www.cyhq.gov.cn/ggjtqyxx/1954551.html", "http://res.wulanchabu.gov.cn/ggjtqyxx/1954623.html"]},
-    "G55_erenhot_saihantala": {"status": "preferred_for_D6_first_leg", "note": "D6常规风景版第一段走G55，不设置全程避开高速", "source": "https://big5.mot.gov.cn/gate/big5/www.mot.gov.cn/tupianxinwen/202307/t20230724_3872159.html"}
+    "erenhot_saihantala_choice": {"status": "choose_on_departure_day", "note": "D6风景版首段：稳妥省力选G55；仅当G208连续铺装、无管制且时长可接受时选G208。网页URI不能锁死道路偏好，必须在高德总览人工确认", "source": "https://big5.mot.gov.cn/gate/big5/www.mot.gov.cn/tupianxinwen/202307/t20230724_3872159.html"}
   },
   "points": {
     "rental": {"name": "一嗨租车(保定站服务点)", "poiId": "B0HKH5B9EL", "lon": 115.480624, "lat": 38.860559, "address": "高德当前显示建华大街716号", "note": "用户订单名称为一嗨租车保定站服务店；出发前以订单定位及门店电话最终确认"},
@@ -27,7 +27,8 @@
     "villis": {"name": "维利斯大酒店(苏尼特左旗)", "poiId": "B0JKAPKU97", "lon": 113.636939, "lat": 43.854291},
     "hantingErenhot": {"name": "汉庭酒店(锡林郭勒盟二连浩特店)", "poiId": "B0K1X54UB2", "lon": 111.985608, "lat": 43.633687},
     "guomen": {"name": "二连浩特国门景区-游客中心", "poiId": "B0HU9LAXO3", "parentPoiId": "B01DF14A1J", "lon": 111.96594, "lat": 43.678288, "note": "使用景区内游客中心而非货运口岸/联检区；坐标采用公开停车入口区域精确值，进入高德后以POI ID定位为准"},
-    "saihantala": {"name": "苏尼特右旗赛汉塔拉镇人民政府", "poiId": "B0FFF5IVWP", "lon": 112.654248, "lat": 42.752388, "note": "D5保底与D6常规风景版稳定镇区POI；二连至此按G55核对"},
+    "saihantala": {"name": "苏尼特右旗赛汉塔拉镇人民政府", "poiId": "B0FFF5IVWP", "lon": 112.654248, "lat": 42.752388, "note": "D5保底镇区POI"},
+    "saihantalaRing": {"name": "中国石油LNG西苏旗环岛加油加气站", "poiId": "B01DF0I0XF", "lon": 112.66, "lat": 42.78, "note": "位于G208与S101交汇处、24小时营业；D6风景版第一段终点和核心G208段起点。二连至此G55/G208由临行高德总览二选一"},
     "saihantalaSouth": {"name": "赛汉塔拉南收费站(G55二广高速入口)", "poiId": "B0FFGQES6G", "lon": 112.65, "lat": 42.7, "note": "D6高速版分段锚点"},
     "baiyinchagan": {"name": "中国石油察右后旗白音加油站", "poiId": "B01DA0HY1T", "lon": 113.18, "lat": 41.44, "note": "位于208国道附近，24小时营业；D6中段G208终点，从此去乌兰察布须切回G55"},
     "baiyinchaganSouth": {"name": "白音察干南收费站(G55二广高速入口)", "poiId": "BZDTP6000F", "lon": 113.18, "lat": 41.41, "note": "D6高速版分段锚点"},
