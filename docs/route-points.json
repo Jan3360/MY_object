@@ -27,7 +27,7 @@
     "abaga": {"name": "阿巴嘎旗别力古台镇", "lon": 114.979139, "lat": 44.025463},
     "villis": {"name": "维利斯大酒店(苏尼特左旗)", "poiId": "B0JKAPKU97", "lon": 113.636939, "lat": 43.854291, "note": "D5起点；至二连优先核对已通车既有G331（原S309），不得混入G625。出发前7天和前1天复核交通运输厅实时路况、12122、属地交警公告及高德逐段详情"},
     "hantingErenhot": {"name": "汉庭酒店(锡林郭勒盟二连浩特店)", "poiId": "B0K1X54UB2", "lon": 111.985608, "lat": 43.633687},
-    "guomen": {"name": "二连浩特国门景区-游客中心", "poiId": "B0HU9LAXO3", "parentPoiId": "B01DF14A1J", "lon": 111.96594, "lat": 43.678288, "note": "使用景区内游客中心而非货运口岸/联检区；坐标采用公开停车入口区域精确值，进入高德后以POI ID定位为准"},
+    "guomen": {"name": "二连浩特国门景区-游客中心", "poiId": "B0HU9LAXO3", "poiIdStatus": "verified_current_amap_text_search", "parentPoiId": "B01DF14A1J", "parentPoiIdStatus": "verified_current_amap_text_search", "lon": 111.96594, "lat": 43.678288, "coordinatePrecision": "public_amap_response_rounds_to_2_decimals; precise entrance-area coordinate cross-checked externally", "verification": {"verifiedAt": "2026-08-14", "query": "二连浩特国门景区游客中心", "result": "高德当前文字搜索同时回显父POI B01DF14A1J=二连浩特国门景区、子POI B0HU9LAXO3=二连浩特国门景区-游客中心，子项parent字段指向父项；电话0479-7533111", "externalEntranceReference": [111.96552, 43.678851], "externalEntranceApproxSeparationMeters": 80}, "note": "晚到报告关于‘仅URI接受、ID未证实’的纠正已被当前高德文字搜索的名称/父子关系回显推翻。实际驾车继续使用游客中心子POI及停车入口区域，不使用景区中心，也不进入货运口岸、联检区或边境管理道路"},
     "saihantala": {"name": "苏尼特右旗赛汉塔拉镇人民政府", "poiId": "B0FFF5IVWP", "lon": 112.654248, "lat": 42.752388, "note": "备用镇区确认点，不作为D5默认绕行"},
     "saihantalaRing": {"name": "中国石油LNG西苏旗环岛加油加气站", "poiId": "B01DF0I0XF", "lon": 112.66, "lat": 42.78, "note": "位于G208与S101交汇处、24小时营业；D6风景版第一段终点和第二段起点，前后两段均须核对G208"},
     "saihantalaSouth": {"name": "赛汉塔拉南收费站(G55二广高速入口)", "poiId": "B0FFGQES6G", "lon": 112.65, "lat": 42.7, "note": "D6高速版分段锚点"},
