@@ -94,6 +94,10 @@
     .segment-title { margin: 15px 0 8px; color: #3b4943; font-size: 14px; font-weight: 800; }
     .segments { display: grid; gap: 8px; }
     .segments a { min-height: 44px; padding: 10px 12px; border: 1px solid #cfdad5; border-radius: 11px; color: #24443a; background: #fff; text-decoration: none; font-size: 14px; font-weight: 650; text-align: center; }
+    .leg { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 7px; }
+    .leg > a { display: flex; align-items: center; justify-content: center; }
+    .leg-web { min-width: 76px; color: #53665e !important; background: #f5f8f6 !important; font-size: 12px !important; }
+    @media (max-width: 420px) { .leg { grid-template-columns: 1fr; } .leg-web { min-height: 38px !important; } }
     details { margin-top: 13px; padding-top: 11px; border-top: 1px dashed #d5ded9; }
     summary { color: #44524c; cursor: pointer; font-weight: 700; }
     .note { margin: 9px 0 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
@@ -127,9 +131,9 @@
   </header>
 
   <section class="top-note">
-    <strong>使用方法：</strong>用 iPhone 的 <strong>Safari</strong> 打开本页。分段驾驶按钮使用 <code>iosamap://path</code> App Scheme 拉起iOS高德；浅色“网页版参考”按钮使用普通HTTPS URI。两者不是同一种能力：HTTPS官方最多支持1个途经点；App Scheme官方支持多途经点但未公布固定上限。本页不依赖未公布上限，工程上主动把所有App驾驶按钮限制在0–1个途经点，多个停靠点一律逐腿拆开。进入高德后先看全程蓝线和道路编号，再点“开始导航”。
+    <strong>使用方法：</strong>用 iPhone 的 <strong>Safari</strong> 打开本页。每个实际驾驶腿都有“App导航”和“HTTPS备用”两个入口：App按钮使用 <code>iosamap://path</code> 拉起iOS高德；备用按钮使用普通HTTPS URI。高德普通分享链接每条仅保证携带1个途经点，因此多站行程已按天、按路段拆分；点击后请核对起终点再开始导航。App Scheme虽支持多途经点但官方未公布固定上限，本页不依赖该上限，所有App按钮也限制在0–1个途经点。
     <div class="danger">
-      本页不能锁死高德的路线偏好——iOS 高德会沿用你 App 里的本地设置。浅色HTTPS按钮只作路线方向参考，且最多保留首个途经点，不能代表整日全部停靠；实际驾驶优先使用逐腿App按钮。出发前把“避开高速”关闭；每次点开后先看全程总览，不要直接点“开始导航”。核对预期道路编号，遇到 <strong>G625、Y912、无编号道路、内部道路、施工便道、草场车辙</strong>，立即取消。现场铺装中断、施工封闭或牧场门一律不进，也不要为追回错过的景点在草地掉头、横穿。
+      本页不能锁死高德的路线偏好——iOS 高德会沿用你 App 里的本地设置。每腿先试App导航；若没有正常拉起或点位载入异常，立即使用同一腿旁边的HTTPS备用按钮。顶部“整日网页版参考”仍只作方向预览、最多保留首个途经点，不能代表整日全部停靠。出发前把“避开高速”关闭；每次点开后先看全程总览，不要直接点“开始导航”。核对预期道路编号，遇到 <strong>G625、Y912、无编号道路、内部道路、施工便道、草场车辙</strong>，立即取消。现场铺装中断、施工封闭或牧场门一律不进，也不要为追回错过的景点在草地掉头、横穿。
     </div>
   </section>
 
@@ -249,7 +253,7 @@
 
   <footer>
     坐标按高德可用的 GCJ-02 制作；酒店与景区优先使用高德POI或精确中文地图点。<br>
-    分段驾驶按钮使用高德iOS App Scheme <code>iosamap://path</code>；普通HTTPS URI官方最多1个途经点，App Scheme多途经点固定上限未公开。Web Service/JS API的容量属于其他产品，不能套用到本页分享按钮。当前页面为稳妥起见，所有App驾驶按钮也仅使用0–1个途经点。参考：<a href="https://lbs.amap.com/api/uri-api/guide/travel/route" target="_blank" rel="noopener noreferrer">HTTPS URI</a>、<a href="https://lbs.amap.com/api/amap-mobile/guide/ios/route" target="_blank" rel="noopener noreferrer">iOS App Scheme</a>。客户端可能按你的本地偏好重算，任何按钮都不能替代临行路况复核。<br><br>
+    每个分段驾驶腿同时提供高德iOS App Scheme <code>iosamap://path</code> 和普通HTTPS URI备用入口；HTTPS官方最多1个途经点，App Scheme多途经点固定上限未公开。Web Service/JS API的容量属于其他产品，不能套用到本页分享按钮。当前页面的两类逐腿按钮均仅使用0–1个途经点。参考：<a href="https://lbs.amap.com/api/uri-api/guide/travel/route" target="_blank" rel="noopener noreferrer">HTTPS URI</a>、<a href="https://lbs.amap.com/api/amap-mobile/guide/ios/route" target="_blank" rel="noopener noreferrer">iOS App Scheme</a>。客户端可能按你的本地偏好重算，任何按钮都不能替代临行路况复核。<br><br>
     路线版本：2026-08-14 · 独立安全复核版
   </footer>
 </main>
@@ -325,6 +329,14 @@ function buildWeb(spec){
 }
 document.querySelectorAll("[data-route]").forEach(a=>{ a.href=buildApp(R[a.dataset.route]); });
 document.querySelectorAll("[data-web]").forEach(a=>{ a.href=buildWeb(R[a.dataset.web]); a.target="_blank"; a.rel="noopener noreferrer"; });
+document.querySelectorAll("a[data-route]").forEach(a=>{
+  const leg=document.createElement("div"); leg.className="leg";
+  a.parentNode.insertBefore(leg,a); leg.appendChild(a);
+  const backup=document.createElement("a"); backup.className="leg-web";
+  backup.textContent="HTTPS备用"; backup.href=buildWeb(R[a.dataset.route]);
+  backup.target="_blank"; backup.rel="noopener noreferrer";
+  leg.appendChild(backup);
+});
 </script>
 </body>
 </html>
