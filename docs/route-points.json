@@ -2,6 +2,10 @@
   "title": "2026-08-20 至 2026-08-27 保定—锡林郭勒—二连浩特自驾",
   "coordinateSystem": "GCJ-02",
   "generatedAt": "2026-08-14",
+  "blockedRoads": {
+    "Y912": {"status": "do_not_use", "avoidNames": ["炮台营子", "南地房子", "红井", "牛奶湖", "太仆寺旗湖泊或村庄点"], "sources": ["https://www.tpsq.gov.cn/tpsq/mltpsq/tftpsq/jtys/2026062316103445824/index.html", "https://www.tpsq.gov.cn/tpsq/mltpsq/tftpsq/jtys/2026062616450944393/index.html"]},
+    "G625": {"status": "do_not_use", "note": "施工走廊，不能作为游客捷径"}
+  },
   "points": {
     "rental": {"name": "一嗨租车(保定站服务点)", "poiId": "B0HKH5B9EL", "lon": 115.480624, "lat": 38.860559, "address": "高德当前显示建华大街716号", "note": "用户订单名称为一嗨租车保定站服务店；出发前以订单定位及门店电话最终确认"},
     "huairou": {"name": "全季酒店(北京怀柔万达广场店)", "poiId": "B0I27CPEDQ", "lon": 116.630326, "lat": 40.319215},
