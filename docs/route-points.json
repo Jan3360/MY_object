@@ -4,7 +4,9 @@
   "generatedAt": "2026-08-14",
   "blockedRoads": {
     "Y912": {"status": "do_not_use", "avoidNames": ["炮台营子", "南地房子", "红井", "牛奶湖", "太仆寺旗湖泊或村庄点"], "sources": ["https://www.tpsq.gov.cn/tpsq/mltpsq/tftpsq/jtys/2026062316103445824/index.html", "https://www.tpsq.gov.cn/tpsq/mltpsq/tftpsq/jtys/2026062616450944393/index.html"]},
-    "G625": {"status": "do_not_use", "note": "施工走廊，不能作为游客捷径"}
+    "G625": {"status": "do_not_use", "note": "施工走廊，不能作为游客捷径", "source": "https://ggzyjy.nmg.gov.cn/jyxx/index_39.html?id=b4f5248f-8bff-47d2-97a1-e96c0d715e67&slb=true"},
+    "G18_hunyuan_lingqiu": {"status": "verify_before_departure", "note": "管制未解除时仅按官方绕行，不走无编号山路", "source": "https://jtyst.shanxi.gov.cn/jtzx/sxhyyw1/202604/t20260415_10104505.shtml"},
+    "G208_volcano_crossing": {"status": "verify_before_departure", "note": "仍管制则取消火山支线，白音察干直接走G55", "source": "https://www.cyhq.gov.cn/ggjtqyxx/1954551.html"}
   },
   "points": {
     "rental": {"name": "一嗨租车(保定站服务点)", "poiId": "B0HKH5B9EL", "lon": 115.480624, "lat": 38.860559, "address": "高德当前显示建华大街716号", "note": "用户订单名称为一嗨租车保定站服务店；出发前以订单定位及门店电话最终确认"},
@@ -26,10 +28,15 @@
     "hantingErenhot": {"name": "汉庭酒店(锡林郭勒盟二连浩特店)", "poiId": "B0K1X54UB2", "lon": 111.985608, "lat": 43.633687},
     "guomen": {"name": "二连浩特国门景区-游客中心", "poiId": "B0HU9LAXO3", "parentPoiId": "B01DF14A1J", "lon": 111.96594, "lat": 43.678288, "note": "使用景区内游客中心而非货运口岸/联检区；坐标采用公开停车入口区域精确值，进入高德后以POI ID定位为准"},
     "saihantala": {"name": "赛汉塔拉镇", "lon": 112.654248, "lat": 42.752388},
+    "saihantalaSouth": {"name": "赛汉塔拉南收费站(G55二广高速入口)", "poiId": "B0FFGQES6G", "lon": 112.65, "lat": 42.7, "note": "D6高速版分段锚点"},
     "baiyinchagan": {"name": "白音察干镇", "lon": 113.199532, "lat": 41.439257},
+    "baiyinchaganSouth": {"name": "白音察干南收费站(G55二广高速入口)", "poiId": "BZDTP6000F", "lon": 113.18, "lat": 41.41, "note": "D6高速版分段锚点"},
+    "volcanoNorth": {"name": "乌兰哈达火山北游客服务中心", "poiId": "B0KA7RX74F", "parentPoiId": "B0FFJ0ZPOT", "lon": 113.16, "lat": 41.64, "note": "只使用官方游客服务中心；施工管制时取消火山支线"},
     "atourUlanqab": {"name": "乌兰察布站达尔登大道亚朵酒店", "poiId": "B0JGJ98630", "lon": 113.145183, "lat": 40.957633},
+    "fengzhenService": {"name": "丰镇服务区(G55二广高速广州方向)", "poiId": "B01DA0HXX5", "lon": 113.16, "lat": 40.51, "note": "D7南向高速明确锚点"},
     "datong": {"name": "大同东信广场", "poiId": "B01600MMA1", "lon": 113.292439, "lat": 40.052931},
     "hunyuan": {"name": "浑源县人民政府", "poiId": "B0FFJVRYMI", "lon": 113.692155, "lat": 39.706029, "note": "明确城区POI；G18浑源—灵丘管制须临行复核"},
+    "lingqiuToll": {"name": "灵丘收费站(G18荣乌高速入口)", "poiId": "B0FFGQHJ8J", "lon": 114.29, "lat": 39.46, "note": "仅在G18官方允许通行时作为D7锚点；管制未解除则按官方绕行"},
     "laiyuan": {"name": "涞源县人民政府", "poiId": "B013800ZUN", "lon": 114.6944, "lat": 39.360638, "note": "明确县城补给锚点"}
   }
 }
