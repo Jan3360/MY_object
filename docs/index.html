@@ -211,7 +211,7 @@
     <div class="actions"><a class="button secondary" data-web="d4preview">整日网页版参考（仅保留锡林浩特）</a></div>
     <div class="segment-title">推荐按道路体系分3段</div>
     <div class="segments"><a data-route="d4a">① 西乌旗 → 锡林浩特</a><a data-route="d4b">② 锡林浩特 → 别力古台</a><a data-route="d4c">③ 别力古台 → 苏左旗维利斯</a></div>
-    <details open><summary>一票否决</summary><p class="note">总览应依次呈现 <code>G207 → G303 → G331</code>；G331满都拉图—别力古台段按已通车主线使用。看到 <strong>G625、额乐特、多希音戈壁、那仁宝拉格、巴彦图嘎、无编号道路、施工便道、草场便道</strong>，立即取消。G207如有施工导改，以12122、属地交警公告和现场铺装主线为准。</p></details>
+    <details open><summary>一票否决</summary><p class="note">最终轴线为巴拉嘎尔高勒—既有G207—锡林浩特—G303—别力古台—G331—满都拉图；每个按钮只覆盖一个道路体系。G331满都拉图—别力古台段按已通车主线使用。看到 <strong>G625、额乐特、多希音戈壁、那仁宝拉格、巴彦图嘎、无编号道路、施工便道、草场便道</strong>，立即取消。G207首段有二期施工导改风险，须在出发前7天和前1天分别复核12122、高德路线详情及属地交警公告，现场只走开放的连续铺装主线。</p></details>
   </section>
 
   <section class="day" id="d5">
@@ -221,7 +221,7 @@
     <div class="actions"><a class="button secondary" data-web="d5preview">整日网页版参考（仅保留酒店）</a></div>
     <div class="segment-title">实际驾驶请按3腿打开</div>
     <div class="segments"><a data-route="d5a">① 苏左旗 → 二连汉庭（G331）</a><a data-route="d5b">② 汉庭 → 国门景区游客中心</a><a data-route="d5c">③ 游客中心 → 汉庭</a></div>
-    <details open><summary>主线验证与保底绕行</summary><p class="note">苏左旗到二连的直达按钮只有在总览显示为连续铺装G331时才使用。若出现 <strong>G625、无名道路、乡道、内部道路或施工便道</strong>，取消，改点下面的保底两段：先到赛汉塔拉，再沿G55/G208北上二连，虽然绕行但干线更明确。G625多希音戈壁—二连段仍有施工资料，见<a href="https://ggzyjy.nmg.gov.cn/jyxx/index_39.html?id=b4f5248f-8bff-47d2-97a1-e96c0d715e67&slb=true" target="_blank" rel="noopener noreferrer">施工监理信息</a>。</p><div class="segments"><a data-route="d5detour1">保底① 苏左旗 → 赛汉塔拉</a><a data-route="d5detour2">保底② 赛汉塔拉 → 二连汉庭</a></div><p class="note">国门按钮绑定高德“二连浩特国门景区-游客中心”POI，不是货运口岸、联检区、界碑或边境管理道路。出发前拨 <strong>0479-7533111</strong> 核实08:30–17:30开放与最后入园；携带身份证原件，边境区域不飞无人机。</p></details>
+    <details open><summary>G331主线验证</summary><p class="note">满都拉图至二连优先走已通车既有G331（原S309）。点开第一腿后必须逐段展开详情，确认全程道路标注为G331，并与新建G625明确区分。若出现 <strong>G625、无编号道路、施工便道、乡道、内部道路或草场路</strong>，立即取消，不自行设计经赛汉塔拉绕行；只有G331遇官方封闭且官方公告明确给出经赛汉塔拉绕行时，才按该官方方案另行导航。G625多希音戈壁—二连段仍有施工资料，见<a href="https://ggzyjy.nmg.gov.cn/jyxx/index_39.html?id=b4f5248f-8bff-47d2-97a1-e96c0d715e67&slb=true" target="_blank" rel="noopener noreferrer">施工监理信息</a>。</p><p class="note">国门按钮绑定高德“二连浩特国门景区-游客中心”POI，沿友谊路/G208口岸方向进入正规游客入口，不是货运口岸、联检区、界碑或边境管理道路。返程点第三腿原路回城区酒店。出发前拨 <strong>0479-7533111</strong> 核实08:30–17:30开放与最后入园；携带身份证原件，边境区域不飞无人机。</p></details>
   </section>
 
   <section class="day" id="d6">
@@ -294,7 +294,7 @@ const R = {
   d3preview:["atourxl",["hantingwest","road99","lookout","mongol"],"hantingwest"],
   d3a:["atourxl",[],"hantingwest"], d3b:["hantingwest",[],"road99"], d3c:["road99",[],"lookout"], d3d:["lookout",[],"mongol"], d3f:["mongol",[],"hantingwest"],
   d4preview:["hantingwest",["atourxl","abaga"],"villis"], d4a:["hantingwest",[],"atourxl"], d4b:["atourxl",[],"abaga"], d4c:["abaga",[],"villis"],
-  d5preview:["villis",["hantinger","guomen"],"hantinger"], d5a:["villis",[],"hantinger"], d5b:["hantinger",[],"guomen"], d5c:["guomen",[],"hantinger"], d5detour1:["villis",[],"saihantala"], d5detour2:["saihantala",[],"hantinger"],
+  d5preview:["villis",["hantinger","guomen"],"hantinger"], d5a:["villis",[],"hantinger"], d5b:["hantinger",[],"guomen"], d5c:["guomen",[],"hantinger"],
   d6h1:["hantinger",[],"saihantalaSouth"], d6h2:["saihantalaSouth",[],"baiyinSouth"], d6h3:["baiyinSouth",[],"atourwl"],
   d6s1fast:["hantinger",[],"saihantalaRing"], d6s1scenic:["hantinger",[],"saihantalaRing"], d6s2:["saihantalaRing",[],"baiyin"], d6s3:["baiyin",[],"volcanoNorth"], d6s4:["volcanoNorth",[],"atourwl"], d6b:["baiyin",[],"atourwl"],
   d7preview:["atourwl",["fengzhenService","datong","hunyuan","lingqiuToll","laiyuan"],"rental"], d7a:["atourwl",["fengzhenService"],"datong"], d7b:["datong",[],"hunyuan"], d7c:["hunyuan",["lingqiuToll"],"laiyuan"], d7d:["laiyuan",[],"rental"]
