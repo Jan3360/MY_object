@@ -29,7 +29,7 @@
     "guomen": {"name": "二连浩特国门景区-游客中心", "poiId": "B0HU9LAXO3", "parentPoiId": "B01DF14A1J", "lon": 111.96594, "lat": 43.678288, "note": "使用景区内游客中心而非货运口岸/联检区；坐标采用公开停车入口区域精确值，进入高德后以POI ID定位为准"},
     "saihantala": {"name": "苏尼特右旗赛汉塔拉镇人民政府", "poiId": "B0FFF5IVWP", "lon": 112.654248, "lat": 42.752388, "note": "D5保底与D6常规风景版稳定镇区POI；二连至此按G55核对"},
     "saihantalaSouth": {"name": "赛汉塔拉南收费站(G55二广高速入口)", "poiId": "B0FFGQES6G", "lon": 112.65, "lat": 42.7, "note": "D6高速版分段锚点"},
-    "baiyinchagan": {"name": "察右后旗白音察干镇人民政府", "poiId": "B0MAYM0NDV", "lon": 113.27, "lat": 41.45, "note": "D6中段G208终点；从此去乌兰察布须切回G55"},
+    "baiyinchagan": {"name": "中国石油察右后旗白音加油站", "poiId": "B01DA0HY1T", "lon": 113.18, "lat": 41.44, "note": "位于208国道附近，24小时营业；D6中段G208终点，从此去乌兰察布须切回G55"},
     "baiyinchaganSouth": {"name": "白音察干南收费站(G55二广高速入口)", "poiId": "BZDTP6000F", "lon": 113.18, "lat": 41.41, "note": "D6高速版分段锚点"},
     "volcanoNorth": {"name": "乌兰哈达火山北游客服务中心", "poiId": "B0KA7RX74F", "parentPoiId": "B0FFJ0ZPOT", "lon": 113.16, "lat": 41.64, "note": "只使用官方游客服务中心；施工管制时取消火山支线"},
     "atourUlanqab": {"name": "乌兰察布站达尔登大道亚朵酒店", "poiId": "B0JGJ98630", "lon": 113.145183, "lat": 40.957633},
