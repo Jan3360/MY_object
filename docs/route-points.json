@@ -5,8 +5,9 @@
   "points": {
     "rental": {"name": "一嗨租车(保定站服务点)", "poiId": "B0HKH5B9EL", "lon": 115.480624, "lat": 38.860559, "address": "高德当前显示建华大街716号", "note": "用户订单名称为一嗨租车保定站服务店；出发前以订单定位及门店电话最终确认"},
     "huairou": {"name": "全季酒店(北京怀柔万达广场店)", "poiId": "B0I27CPEDQ", "lon": 116.630326, "lat": 40.319215},
-    "fengning": {"name": "丰宁满族自治县人民政府", "lon": 116.6455, "lat": 41.209},
-    "datan": {"name": "国家一号风景大道大滩镇起始点", "poiId": "B0FFJHYS3H", "lon": 116.016421, "lat": 41.576804},
+    "tanghekou": {"name": "中国石化汤河路加油站", "poiId": "B0FFFADSP5", "lon": 116.641086, "lat": 40.732996, "note": "24小时营业，位于汤河口镇滦赤路与平安路交叉口，作为G111沿线明确锚点"},
+    "fengning": {"name": "丰宁满族自治县人民政府", "poiId": "B013A0PQHW", "lon": 116.645781, "lat": 41.208793},
+    "datan": {"name": "大滩镇人民政府", "poiId": "B0FFF4MXTM", "lon": 116.016415, "lat": 41.576749, "note": "采用镇政府明确POI，不使用模糊风景大道入口"},
     "duolun": {"name": "全季酒店(锡林郭勒盟多伦县店)", "poiId": "B0MD6UATJN", "lon": 116.504024, "lat": 42.201586},
     "zhenglan": {"name": "正蓝旗上都镇", "lon": 115.98732, "lat": 42.240341},
     "sanggen": {"name": "桑根达来镇", "lon": 115.9522, "lat": 42.675494},
@@ -19,12 +20,12 @@
     "abaga": {"name": "阿巴嘎旗别力古台镇", "lon": 114.979139, "lat": 44.025463},
     "villis": {"name": "维利斯大酒店(苏尼特左旗)", "poiId": "B0JKAPKU97", "lon": 113.636939, "lat": 43.854291},
     "hantingErenhot": {"name": "汉庭酒店(锡林郭勒盟二连浩特店)", "poiId": "B0K1X54UB2", "lon": 111.985608, "lat": 43.633687},
-    "guomen": {"name": "二连浩特国门景区", "poiId": "B01DF14A1J", "lon": 111.955344, "lat": 43.678297},
+    "guomen": {"name": "二连浩特国门景区-游客中心", "poiId": "B0HU9LAXO3", "parentPoiId": "B01DF14A1J", "lon": 111.96594, "lat": 43.678288, "note": "使用景区内游客中心而非货运口岸/联检区；坐标采用公开停车入口区域精确值，进入高德后以POI ID定位为准"},
     "saihantala": {"name": "赛汉塔拉镇", "lon": 112.654248, "lat": 42.752388},
     "baiyinchagan": {"name": "白音察干镇", "lon": 113.199532, "lat": 41.439257},
     "atourUlanqab": {"name": "乌兰察布站达尔登大道亚朵酒店", "poiId": "B0JGJ98630", "lon": 113.145183, "lat": 40.957633},
     "datong": {"name": "大同东信广场", "poiId": "B01600MMA1", "lon": 113.292439, "lat": 40.052931},
-    "hunyuan": {"name": "浑源县城", "lon": 113.699475, "lat": 39.693407},
-    "laiyuan": {"name": "涞源县城", "lon": 114.694284, "lat": 39.360247}
+    "hunyuan": {"name": "浑源县人民政府", "poiId": "B0FFJVRYMI", "lon": 113.692155, "lat": 39.706029, "note": "明确城区POI；G18浑源—灵丘管制须临行复核"},
+    "laiyuan": {"name": "涞源县人民政府", "poiId": "B013800ZUN", "lon": 114.6944, "lat": 39.360638, "note": "明确县城补给锚点"}
   }
 }
