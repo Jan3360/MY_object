@@ -190,19 +190,18 @@
 
   <section class="day" id="d3">
     <div class="day-head"><div><div class="date">D3 · 8月23日 周日</div><h2>锡林浩特 → 西乌旗 → 草原99号公路</h2></div><div class="sleep">住西乌旗</div></div>
-    <p class="route-line">锡林浩特亚朵 <span>→</span> 西乌旗汉庭 <span>→</span> 99号公路官方起点 <span>→</span> 瞭望山 <span>→</span> 蒙古汗城 <span>→</span> 游牧部落 <span>→</span> 西乌旗汉庭</p>
-    <div class="meta"><span>核心风景日</span><span>16:30硬折返</span><span>只走连续铺装路</span></div>
+    <p class="route-line">锡林浩特亚朵 <span>→</span> 西乌旗汉庭 <span>→</span> 99号公路官方起点 <span>→</span> 瞭望山 <span>→</span> 蒙古汗城旅游景区停车场（明确铺装出口）<span>→</span> 西乌旗汉庭</p>
+    <div class="meta"><span>核心风景日</span><span>16:30硬折返</span><span>只走当日开放的正规铺装国省干线</span></div>
     <div class="actions"><a class="button secondary" data-web="d3preview">整日网页版参考（仅保留首个途经点）</a></div>
-    <div class="segment-title">推荐：到一站再点下一站</div>
+    <div class="segment-title">最保守按3组驾驶；景观组仍提供逐腿按钮</div>
     <div class="segments">
       <a data-route="d3a">① 锡林浩特 → 西乌旗汉庭</a>
-      <a data-route="d3b">② 汉庭 → 99号公路官方起点</a>
-      <a data-route="d3c">③ 官方起点 → 瞭望山</a>
-      <a data-route="d3d">④ 瞭望山 → 蒙古汗城</a>
-      <a data-route="d3e">⑤ 蒙古汗城 → 游牧部落</a>
-      <a data-route="d3f">⑥ 游牧部落 → 西乌旗汉庭</a>
+      <a data-route="d3b">②A 汉庭 → 99号公路官方起点</a>
+      <a data-route="d3c">②B 官方起点 → 瞭望山</a>
+      <a data-route="d3d">②C 瞭望山 → 蒙古汗城停车场/铺装出口</a>
+      <a data-route="d3f">③ 蒙古汗城停车场 → 西乌旗汉庭</a>
     </div>
-    <details open><summary>草原99安全规则</summary><p class="note"><span class="warning">不要采用“网红机位、草原深处、最佳弯道、牧场穿越”等同名点。</span> 99号起点与瞭望山POI的公开高德坐标精度有限，所以只按唯一POI名称定位、逐腿展开总览。若蓝线进入细线、虚线、双车辙、Y274半拉山改建段、牧场门或围栏，立刻取消；任意相邻景点若不是连续铺装路，直接跳过并原路返回城区。不要为追回错过的机位在草地掉头或横穿。可查看西乌旗官方<a href="https://www.xwq.gov.cn/xwzmqq/xwfy/yjxw/ylgl/yzxw/2024062810185344976/index.html" target="_blank" rel="noopener noreferrer">草原99号公路参考</a>，但临行仍以最新版高德道路层和现场开放为准。</p></details>
+    <details open><summary>草原99安全规则</summary><p class="note">锡林浩特至巴拉嘎尔高勒只认<strong>当日开放的正规铺装国省干线</strong>，按施工导改行驶，不把任何未经实时总览验证的单一道路编号写成不可变主轴。<span class="warning">不要采用“网红机位、草原深处、最佳弯道、牧场穿越”等同名点。</span> 99号起点与瞭望山POI的公开高德坐标精度有限，所以只按唯一POI名称定位、逐腿展开总览；景观段最后硬设“蒙古汗城旅游景区停车场”作为明确铺装出口。若蓝线进入细线、虚线、双车辙、Y274半拉山改建段、牧场门或围栏，立刻取消；任意相邻景点若不是连续铺装路，跳过并原路返回城区。不要为追回机位在草地掉头或横穿。可查看西乌旗官方<a href="https://www.xwq.gov.cn/xwzmqq/xwfy/yjxw/ylgl/yzxw/2024062810185344976/index.html" target="_blank" rel="noopener noreferrer">草原99号公路参考</a>，临行仍以最新版高德道路层和现场开放为准。</p></details>
   </section>
 
   <section class="day" id="d4">
@@ -268,8 +267,7 @@ const P = {
   hantingwest:{name:"汉庭西乌珠穆沁旗生态公园酒店",id:"B0KU17FT3I",lon:117.627605,lat:44.575173},
   road99:{name:"西乌珠穆沁旗草原99号公路起点",lon:117.35,lat:44.50},
   lookout:{name:"成吉思汗瞭望山景区",lon:117.47,lat:44.44},
-  mongol:{name:"蒙古汗城旅游景区",lon:117.665053,lat:44.458624},
-  nomad:{name:"游牧部落观景驿站",lon:118.008,lat:44.399344},
+  mongol:{name:"蒙古汗城旅游景区停车场",id:"B0FFF4JRDR",lon:117.67,lat:44.46},
   abaga:{name:"阿巴嘎旗别力古台镇",lon:114.979139,lat:44.025463},
   villis:{name:"维利斯大酒店(苏尼特左旗)",id:"B0JKAPKU97",lon:113.636939,lat:43.854291},
   hantinger:{name:"汉庭酒店(锡林郭勒盟二连浩特店)",id:"B0K1X54UB2",lon:111.985608,lat:43.633687},
@@ -290,8 +288,8 @@ const R = {
   d0:["rental",[],"huairou"],
   d1preview:["huairou",["tanghekou","fengning","datan"],"duolun"], d1a:["huairou",["tanghekou"],"fengning"], d1b:["fengning",["datan"],"duolun"],
   d2preview:["duolun",["zhenglan","sanggen"],"atourxl"], d2a:["duolun",["zhenglan"],"sanggen"], d2b:["sanggen",[],"atourxl"],
-  d3preview:["atourxl",["hantingwest","road99","lookout","mongol","nomad"],"hantingwest"],
-  d3a:["atourxl",[],"hantingwest"], d3b:["hantingwest",[],"road99"], d3c:["road99",[],"lookout"], d3d:["lookout",[],"mongol"], d3e:["mongol",[],"nomad"], d3f:["nomad",[],"hantingwest"],
+  d3preview:["atourxl",["hantingwest","road99","lookout","mongol"],"hantingwest"],
+  d3a:["atourxl",[],"hantingwest"], d3b:["hantingwest",[],"road99"], d3c:["road99",[],"lookout"], d3d:["lookout",[],"mongol"], d3f:["mongol",[],"hantingwest"],
   d4preview:["hantingwest",["atourxl","abaga"],"villis"], d4a:["hantingwest",[],"atourxl"], d4b:["atourxl",[],"abaga"], d4c:["abaga",[],"villis"],
   d5preview:["villis",["hantinger","guomen"],"hantinger"], d5a:["villis",[],"hantinger"], d5b:["hantinger",[],"guomen"], d5c:["guomen",[],"hantinger"], d5detour1:["villis",[],"saihantala"], d5detour2:["saihantala",[],"hantinger"],
   d6h1:["hantinger",[],"saihantalaSouth"], d6h2:["saihantalaSouth",[],"baiyinSouth"], d6h3:["baiyinSouth",[],"atourwl"],
