@@ -226,13 +226,15 @@
 
   <section class="day" id="d6">
     <div class="day-head"><div><div class="date">D6 · 8月26日 周三</div><h2>二连浩特 → 赛汉塔拉 → 白音察干 → 乌兰察布</h2></div><div class="sleep">住乌兰察布</div></div>
-    <p class="route-line">二连汉庭 <span>→</span> 赛汉塔拉 <span>→</span> 白音察干 <span>→</span>（天气允许可选乌兰哈达火山北游客中心）<span>→</span> 乌兰察布亚朵</p>
-    <div class="meta"><span>约340–390km</span><span>风景版G208</span><span>高速版每段只认G55</span></div>
+    <p class="route-line">二连汉庭 <span>→</span> 赛汉塔拉镇政府（G55）<span>→</span> 白音察干镇政府（仅此段G208）<span>→</span> 乌兰察布亚朵（切回G55）</p>
+    <div class="meta"><span>常规约340–360km</span><span>只有中段是G208风景段</span><span>前后两段只认G55</span></div>
     <div class="segment-title">雨天/疲劳：高速版固定3段</div>
     <div class="segments"><a data-route="d6h1">高速① 二连 → 赛汉塔拉南收费站</a><a data-route="d6h2">高速② 赛汉塔拉南 → 白音察干南收费站</a><a data-route="d6h3">高速③ 白音察干南 → 乌兰察布亚朵</a></div>
-    <div class="segment-title">晴天：G208风景版最多4段</div>
-    <div class="segments"><a data-route="d6s1">风景① 二连 → 赛汉塔拉镇</a><a data-route="d6s2">风景② 赛汉塔拉 → 白音察干（核对G208）</a><a data-route="d6s3">可选③ 白音察干 → 火山北游客中心</a><a data-route="d6s4">可选④ 游客中心 → 乌兰察布亚朵</a><a data-route="d6b">取消火山：白音察干 → 乌兰察布</a></div>
-    <details open><summary>当天判断</summary><p class="note">高速3段每次总览只认G55；风景第二段必须沿G208普通国道，若回吸G55就不算风景版，若为了避高速绕入草原支路或G335施工段也取消。火山只绑定官方“乌兰哈达火山北游客服务中心”，不使用某号火山、牧场、草原深处等POI。G208火山公园跨线工程若临行仍管制，立即取消火山③④，白音察干直接走G55去酒店，详见<a href="https://www.cyhq.gov.cn/ggjtqyxx/1954551.html" target="_blank" rel="noopener noreferrer">施工延期公告</a>。路线若向东进入怀安或张家口，取消重选。</p></details>
+    <div class="segment-title">晴天常规风景版：固定3段</div>
+    <div class="segments"><a data-route="d6s1">风景① 二连 → 赛汉塔拉镇政府（G55）</a><a data-route="d6s2">风景② 赛汉塔拉 → 白音察干镇政府（只认G208）</a><a data-route="d6b">风景③ 白音察干 → 乌兰察布亚朵（切回G55）</a></div>
+    <div class="segment-title">乌兰哈达火山：独立、可取消附加项</div>
+    <div class="segments"><a data-route="d6s3">附加A 白音察干 → 火山北游客中心</a><a data-route="d6s4">附加B 游客中心 → 乌兰察布亚朵</a></div>
+    <details open><summary>当天判断</summary><p class="note">常规风景版不是“全程不走高速”：第一段二连至赛汉塔拉走G55，只有第二段赛汉塔拉至白音察干沿G208普通国道，第三段必须切回G55去酒店。不要让高德在白音察干以后继续沿G208或乡道扩展。可参考交通运输部<a href="https://big5.mot.gov.cn/gate/big5/www.mot.gov.cn/tupianxinwen/202307/t20230724_3872159.html" target="_blank" rel="noopener noreferrer">二赛高速资料</a>。火山只绑定官方“乌兰哈达火山北游客服务中心”，并且只有临行确认G208施工交通组织允许时才启用；否则直接执行风景③。管制依据见<a href="https://www.cyhq.gov.cn/ggjtqyxx/1954551.html" target="_blank" rel="noopener noreferrer">公告一</a>、<a href="http://res.wulanchabu.gov.cn/ggjtqyxx/1954623.html" target="_blank" rel="noopener noreferrer">公告二</a>。G625仍硬性排除；路线若向东进入怀安或张家口，取消重选。</p></details>
   </section>
 
   <section class="day" id="d7">
@@ -272,9 +274,9 @@ const P = {
   villis:{name:"维利斯大酒店(苏尼特左旗)",id:"B0JKAPKU97",lon:113.636939,lat:43.854291},
   hantinger:{name:"汉庭酒店(锡林郭勒盟二连浩特店)",id:"B0K1X54UB2",lon:111.985608,lat:43.633687},
   guomen:{name:"二连浩特国门景区-游客中心",id:"B0HU9LAXO3",lon:111.965940,lat:43.678288},
-  saihantala:{name:"赛汉塔拉镇",lon:112.654248,lat:42.752388},
+  saihantala:{name:"苏尼特右旗赛汉塔拉镇人民政府",id:"B0FFF5IVWP",lon:112.654248,lat:42.752388},
   saihantalaSouth:{name:"赛汉塔拉南收费站(G55二广高速入口)",id:"B0FFGQES6G",lon:112.65,lat:42.70},
-  baiyin:{name:"白音察干镇",lon:113.199532,lat:41.439257},
+  baiyin:{name:"察右后旗白音察干镇人民政府",id:"B0MAYM0NDV",lon:113.27,lat:41.45},
   baiyinSouth:{name:"白音察干南收费站(G55二广高速入口)",id:"BZDTP6000F",lon:113.18,lat:41.41},
   volcanoNorth:{name:"乌兰哈达火山北游客服务中心",id:"B0KA7RX74F",lon:113.16,lat:41.64},
   atourwl:{name:"乌兰察布站达尔登大道亚朵酒店",id:"B0JGJ98630",lon:113.145183,lat:40.957633},
