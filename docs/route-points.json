@@ -36,7 +36,7 @@
     "volcanoNorth": {"name": "乌兰哈达火山北游客服务中心", "poiId": "B0KA7RX74F", "parentPoiId": "B0FFJ0ZPOT", "lon": 113.16, "lat": 41.64, "note": "只使用官方游客服务中心；施工管制时取消火山支线"},
     "atourUlanqab": {"name": "乌兰察布站达尔登大道亚朵酒店", "poiId": "B0JGJ98630", "lon": 113.145183, "lat": 40.957633},
     "fengzhenService": {"name": "丰镇服务区(G55二广高速广州方向)", "poiId": "B01DA0HXX5", "lon": 113.16, "lat": 40.51, "note": "D7南向高速明确锚点"},
-    "datong": {"name": "大同东信广场", "poiId": "B01600MMA1", "lon": 113.292439, "lat": 40.052931},
+    "datong": {"name": "东信广场南地面停车场", "poiId": "B0GKVC516V", "parentPoiId": "B01600MMA1", "lon": 113.29, "lat": 40.05, "note": "东信广场明确地面停车POI，地址为魏都大道与昌宁街交叉口北100米；用于D7短暂停车、吃饭和继续前往浑源"},
     "hunyuan": {"name": "浑源县人民政府", "poiId": "B0FFJVRYMI", "lon": 113.692155, "lat": 39.706029, "note": "明确城区POI；G18浑源—灵丘管制须临行复核"},
     "lingqiuToll": {"name": "灵丘收费站(G18荣乌高速入口)", "poiId": "B0FFGQHJ8J", "lon": 114.29, "lat": 39.46, "note": "仅在G18官方允许通行时作为D7锚点；管制未解除则按官方绕行"},
     "laiyuan": {"name": "涞源县人民政府", "poiId": "B013800ZUN", "lon": 114.6944, "lat": 39.360638, "note": "明确县城补给锚点"}
