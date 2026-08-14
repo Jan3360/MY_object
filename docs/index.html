@@ -121,15 +121,15 @@
     <div class="badge-row">
       <span class="badge">iPhone Safari</span>
       <span class="badge">高德地图 App</span>
-      <span class="badge">每天一键载入途经点</span>
-      <span class="badge">附分段安全按钮</span>
+      <span class="badge">App分段按钮：0–1途经点</span>
+      <span class="badge">HTTPS参考：最多1途经点</span>
     </div>
   </header>
 
   <section class="top-note">
-    <strong>使用方法：</strong>用 iPhone 的 <strong>Safari</strong> 打开本页，出发前点当天蓝色按钮。高德会载入当天起点、终点和途经点；进入高德后先看一遍全程蓝线和道路编号，再点“开始导航”。
+    <strong>使用方法：</strong>用 iPhone 的 <strong>Safari</strong> 打开本页。分段驾驶按钮使用 <code>iosamap://path</code> App Scheme 拉起iOS高德；浅色“网页版参考”按钮使用普通HTTPS URI。两者不是同一种能力：HTTPS官方最多支持1个途经点；App Scheme官方支持多途经点但未公布固定上限。本页不依赖未公布上限，工程上主动把所有App驾驶按钮限制在0–1个途经点，多个停靠点一律逐腿拆开。进入高德后先看全程蓝线和道路编号，再点“开始导航”。
     <div class="danger">
-      本页不能锁死高德的路线偏好——iOS 高德会沿用你 App 里的本地设置。出发前把“避开高速”关闭；每次点开后先看全程总览，不要直接点“开始导航”。核对预期道路编号，遇到 <strong>G625、Y912、无编号道路、内部道路、施工便道、草场车辙</strong>，立即取消。现场铺装中断、施工封闭或牧场门一律不进，也不要为追回错过的景点在草地掉头、横穿。D1、D3、D4、D5、D6、D7优先使用分段按钮。
+      本页不能锁死高德的路线偏好——iOS 高德会沿用你 App 里的本地设置。浅色HTTPS按钮只作路线方向参考，且最多保留首个途经点，不能代表整日全部停靠；实际驾驶优先使用逐腿App按钮。出发前把“避开高速”关闭；每次点开后先看全程总览，不要直接点“开始导航”。核对预期道路编号，遇到 <strong>G625、Y912、无编号道路、内部道路、施工便道、草场车辙</strong>，立即取消。现场铺装中断、施工封闭或牧场门一律不进，也不要为追回错过的景点在草地掉头、横穿。
     </div>
   </section>
 
@@ -249,7 +249,7 @@
 
   <footer>
     坐标按高德可用的 GCJ-02 制作；酒店与景区优先使用高德POI或精确中文地图点。<br>
-    高德 iOS 多途经点官方URI：<code>iosamap://path</code>。客户端可能按你的本地偏好重算，任何按钮都不能替代临行路况复核。<br><br>
+    分段驾驶按钮使用高德iOS App Scheme <code>iosamap://path</code>；普通HTTPS URI官方最多1个途经点，App Scheme多途经点固定上限未公开。Web Service/JS API的容量属于其他产品，不能套用到本页分享按钮。当前页面为稳妥起见，所有App驾驶按钮也仅使用0–1个途经点。参考：<a href="https://lbs.amap.com/api/uri-api/guide/travel/route" target="_blank" rel="noopener noreferrer">HTTPS URI</a>、<a href="https://lbs.amap.com/api/amap-mobile/guide/ios/route" target="_blank" rel="noopener noreferrer">iOS App Scheme</a>。客户端可能按你的本地偏好重算，任何按钮都不能替代临行路况复核。<br><br>
     路线版本：2026-08-14 · 独立安全复核版
   </footer>
 </main>
